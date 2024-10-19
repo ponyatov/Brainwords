@@ -98,15 +98,7 @@ Low flow rate linux up to 5 Mkeys, Windows up to 10 Mkeys<br>
 
 **How to buy the program?**
 <br><br>
-Write @phrutis in telegram.<br>
-After BTC payment you will receive 2 zip archives
-First v0.7 (recommend)<br>
-Second v0.8<br>
-The difference in v0.8 is added --rootsuffix<br>
-You can also specify the bit depth for the bloom filter.<br>
-Otherwise everything is the same.<br>
-There is also a short instruction inside the archives.<br>
-After the purchase, I will help with the launch, we will check the performance and other issues.
+https://t.me/cuda8
 <hr>
 
 **Why did the program freeze at startup?**
