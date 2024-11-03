@@ -38,10 +38,20 @@ extern char *yyfile;                   ///< file name
 extern int yyparse();                  ///< parser
 extern void yyerror(const char *msg);  ///< syntax error callback
 #include "Brainwords.parser.hpp"
-#define TOKEN(C, X)               \
-    {                             \
-        yylval.o = new C(yytext); \
-        return X;                 \
+#define TOKEN                    \
+    {                            \
+        yylval.n = atoi(yytext); \
+        return INT;              \
+    }
+#define TOKEC                 \
+    {                         \
+        yylval.c = yytext[0]; \
+        return CHAR;          \
+    }
+#define TOKES                               \
+    {                                       \
+        yylval.s = new std::string(yytext); \
+        return STR;                         \
     }
 /// @}
 

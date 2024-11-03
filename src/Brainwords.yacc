@@ -2,10 +2,19 @@
     #include "Brainwords.hpp"
 %}
 
-%defines %union { int n; char *s; char c; }
+%defines %union { int n; std::string *s; char c; }
+
+%token<n> INT
+%token<c> CHAR
+%token<s> STR
 
 %%
-ini:
+ini: | ini ex
+
+ex: INT  { std::cout << " int:" << $1 << std::endl; }
+  | CHAR { std::cout << "char:" << $1 << std::endl; }
+  | STR  { std::cout << " str:" << *$1 << std::endl; delete $1; }
+
 %%
 
 void yyerror(const char *msg) {

@@ -95,12 +95,22 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__parser.html#gacd8617a8f2ac0de8bc1cc032cf449e19">   38</a></span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="group__parser.html#gacd8617a8f2ac0de8bc1cc032cf449e19">yyparse</a>();                  </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__parser.html#ga3d563be0a19ed5425de494696611750e">   39</a></span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__parser.html#ga3d563be0a19ed5425de494696611750e">yyerror</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *msg);  </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;Brainwords.parser.hpp&quot;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__parser.html#gabc645874599ca7e64d78528dd021c832">   41</a></span><span class="preprocessor">#define TOKEN(C, X)               \</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    {                             \</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">        yylval.o = new C(yytext); \</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">        return X;                 \</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__parser.html#ga5c3a83864bf5991d09aa5c2abb911bf0">   41</a></span><span class="preprocessor">#define TOKEN                    \</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    {                            \</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">        yylval.n = atoi(yytext); \</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">        return INT;              \</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">    }</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__parser.html#ga13116bc82b7c30ce0b508ca95553ce66">   46</a></span><span class="preprocessor">#define TOKEC                 \</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">    {                         \</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">        yylval.c = yytext[0]; \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">        return CHAR;          \</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    }</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__parser.html#gab55dcd5b84f93eb2d48183dc9be5279e">   51</a></span><span class="preprocessor">#define TOKES                               \</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    {                                       \</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">        yylval.s = new std::string(yytext); \</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">        return STR;                         \</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    }</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="ttc" id="agroup__main_html_ga0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="group__main.html#ga0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">POSIX entry point.</div><div class="ttdef"><b>Definition:</b> Brainwords.cpp:5</div></div>
 <div class="ttc" id="agroup__main_html_gab80c662dd48dd41d0651baa0e2db3d1b"><div class="ttname"><a href="group__main.html#gab80c662dd48dd41d0651baa0e2db3d1b">arg</a></div><div class="ttdeci">void arg(int argc, char *argv)</div><div class="ttdoc">print command line argument</div><div class="ttdef"><b>Definition:</b> Brainwords.cpp:17</div></div>
 <div class="ttc" id="agroup__parser_html_ga3d563be0a19ed5425de494696611750e"><div class="ttname"><a href="group__parser.html#ga3d563be0a19ed5425de494696611750e">yyerror</a></div><div class="ttdeci">void yyerror(const char *msg)</div><div class="ttdoc">syntax error callback</div></div>
