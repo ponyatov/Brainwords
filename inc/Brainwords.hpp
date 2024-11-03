@@ -34,6 +34,7 @@ extern int yylex();                    ///< lexer
 extern int yylineno;                   ///< curren line
 extern char *yytext;                   ///< parsed literal
 extern FILE *yyin;                     ///< input file
+extern int yystr(std::string s);       ///< parse string
 extern char *yyfile;                   ///< file name
 extern int yyparse();                  ///< parser
 extern void yyerror(const char *msg);  ///< syntax error callback
