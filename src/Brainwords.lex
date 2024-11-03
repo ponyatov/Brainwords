@@ -12,10 +12,20 @@ alphanum [_a-zA-Z0-9]
 
 %%
 
-#[^\n]*             {}      // line comment
-[ \t\r\n]+          {}      // drop spaces
-{sign}?{dec}+       TOKEN
-{alpha}{alphanum}*  TOKES
+#[^\n]*             {}                  // line comment
+[ \t\r\n]+          {}                  // drop spaces
+
+"-v"                {return VERBOSE;}   // cmd options
+"--bits"            {return BITS;}
+"--inputAddress"    {return ADDRESS;}
+"--inputPhrase"     {return PHRASE;}
+
+{sign}?{dec}+       TOKEN(INT)          // numbers
+
+{alpha}+"/"         TOKES(DIR)          // strings
+{alpha}+"."{alpha}+ TOKES(FILENAME)
+{alpha}{alphanum}*  TOKES(STR)
+
 .                   TOKEC   // any char
 
 %%

@@ -20,3 +20,8 @@ int main(int argc, char *argv[]) {
 void arg(int argc, char *argv) {  //
     fprintf(stderr, "argv[%i] = <%s>\n", argc, argv);
 }
+
+bool verbose = false;
+int bits = 16;
+std::string address("/dev/null");
+std::string phrase("/dev/null");
