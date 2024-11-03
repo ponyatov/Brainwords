@@ -31,29 +31,43 @@ void arg(int argc, char *argv);
 /// @defgroup parser parser
 /// @{
 extern int yylex();                    ///< lexer
-extern int yylineno;                   ///< curren line
-extern char *yytext;                   ///< parsed literal
+extern int yylineno;                   ///< curren line number
+extern char *yytext;                   ///< parsed token literal
 extern FILE *yyin;                     ///< input file
+extern char *yyfile;                   ///< current file name
 extern int yystr(std::string s);       ///< parse string
-extern char *yyfile;                   ///< file name
 extern int yyparse();                  ///< parser
 extern void yyerror(const char *msg);  ///< syntax error callback
 #include "Brainwords.parser.hpp"
-#define TOKEN                    \
+
+/// @brief numeric (integer) token
+#define TOKEN(X)                 \
     {                            \
         yylval.n = atoi(yytext); \
-        return INT;              \
+        return X;                \
     }
+
+/// @brief single char token
 #define TOKEC                 \
     {                         \
         yylval.c = yytext[0]; \
         return CHAR;          \
     }
-#define TOKES                               \
+
+/// @brief string token (strings, file names,..)
+#define TOKES(X)                            \
     {                                       \
         yylval.s = new std::string(yytext); \
-        return STR;                         \
+        return X;                           \
     }
+/// @}
+
+/// @defgroup config config
+/// @{
+extern bool verbose;         ///< verbose output
+extern int bits;             ///< 16 or 20 or 24
+extern std::string address;  ///< `--inputAddress addresses.txt`
+extern std::string phrase;   ///< `--inputPhrase dictionary.txt`
 /// @}
 
 /// @}

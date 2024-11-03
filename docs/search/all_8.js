@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['yyerror_0',['yyerror',['../group__parser.html#ga3d563be0a19ed5425de494696611750e',1,'Brainwords.hpp']]],
-  ['yyfile_1',['yyfile',['../group__parser.html#ga53be452efd4ab470618a809085f3edcb',1,'Brainwords.hpp']]],
-  ['yyin_2',['yyin',['../group__parser.html#ga46af646807e0797e72b6e8945e7ea88b',1,'Brainwords.hpp']]],
-  ['yylex_3',['yylex',['../group__parser.html#gaa40b27ae32d6d1ae7160bd6256e08eb8',1,'Brainwords.hpp']]],
-  ['yylineno_4',['yylineno',['../group__parser.html#ga5e36364965360da7b7cdfc2188e0af84',1,'Brainwords.hpp']]],
-  ['yyparse_5',['yyparse',['../group__parser.html#gacd8617a8f2ac0de8bc1cc032cf449e19',1,'Brainwords.hpp']]],
-  ['yystr_6',['yystr',['../group__parser.html#ga44db932d9f18b0b13aa7fa0f14cf7108',1,'Brainwords.hpp']]],
-  ['yytext_7',['yytext',['../group__parser.html#gad9264b77d56b6971f29739e2bda77f51',1,'Brainwords.hpp']]]
+  ['tokec_0',['TOKEC',['../group__parser.html#ga13116bc82b7c30ce0b508ca95553ce66',1,'Brainwords.hpp']]],
+  ['token_1',['TOKEN',['../group__parser.html#gac08013776cb6bfdac4adff674cf26b49',1,'Brainwords.hpp']]],
+  ['tokes_2',['TOKES',['../group__parser.html#gab1c551b8022912682f890b74db392359',1,'Brainwords.hpp']]]
 ];

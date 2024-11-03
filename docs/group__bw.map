@@ -1,6 +1,7 @@
 <map id="bw" name="bw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,55,47,80"/>
-<area shape="rect" id="node2" href="$group__libc.html" title=" " alt="" coords="103,5,149,31"/>
-<area shape="rect" id="node3" href="$group__main.html" title=" " alt="" coords="99,55,153,80"/>
-<area shape="rect" id="node4" href="$group__parser.html" title=" " alt="" coords="95,104,157,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,47,105"/>
+<area shape="rect" id="node2" href="$group__config.html" title=" " alt="" coords="95,5,157,31"/>
+<area shape="rect" id="node3" href="$group__libc.html" title=" " alt="" coords="103,55,149,80"/>
+<area shape="rect" id="node4" href="$group__main.html" title=" " alt="" coords="99,104,153,129"/>
+<area shape="rect" id="node5" href="$group__parser.html" title=" " alt="" coords="95,153,157,179"/>
 </map>
