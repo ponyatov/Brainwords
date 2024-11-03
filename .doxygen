@@ -1,0 +1,16 @@
+PROJECT_NAME           = "Brainwallet"
+PROJECT_BRIEF          = "Find Lost Bitcoin Passphrases"
+HTML_OUTPUT            = docs
+OUTPUT_DIRECTORY       =
+INPUT                  = README.md src inc
+EXCLUDE                = ref/* *.pdf *.djvu
+WARN_IF_UNDOCUMENTED   = NO
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+GENERATE_LATEX         = NO
+FILE_PATTERNS         += *.lex *.yacc
+EXTENSION_MAPPING      = lex=C++ yacc=C++ ino=C++
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+SORT_GROUP_NAMES       = YES
+REPEAT_BRIEF           = NO
